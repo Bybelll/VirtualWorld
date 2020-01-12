@@ -19,6 +19,7 @@ void World::drawWorld() {
 	for (int i = 0; i < 20 + 2; i++) {
 		cout << "-";
 	}
+
 }
 
 void World::moveCursorTo(int x, int y)
