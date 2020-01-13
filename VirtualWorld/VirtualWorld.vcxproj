@@ -152,14 +152,26 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Animal.cpp" />
+    <ClCompile Include="Kangaroo.cpp" />
+    <ClCompile Include="ListItem.cpp" />
     <ClCompile Include="Organism.cpp" />
+    <ClCompile Include="OrganismList.cpp" />
+    <ClCompile Include="Sheep.cpp" />
+    <ClCompile Include="Sloth.cpp" />
+    <ClCompile Include="Turtle.cpp" />
     <ClCompile Include="VirtualWorld.cpp" />
     <ClCompile Include="Wolf.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
+    <ClInclude Include="Kangaroo.h" />
+    <ClInclude Include="ListItem.h" />
     <ClInclude Include="Organism.h" />
+    <ClInclude Include="OrganismList.h" />
+    <ClInclude Include="Sheep.h" />
+    <ClInclude Include="Sloth.h" />
+    <ClInclude Include="Turtle.h" />
     <ClInclude Include="Wolf.h" />
     <ClInclude Include="World.h" />
   </ItemGroup>

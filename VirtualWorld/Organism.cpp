@@ -18,6 +18,12 @@ void Organism::draw()
 {
 	this->world->moveCursorTo(this->getX(), this->getY());
 	std::cout << this->symbol;
+	
+}
+
+int Organism::getInitiative()
+{
+	return this->initiative;
 }
 
 void Organism::setX(int x)

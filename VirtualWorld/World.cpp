@@ -4,22 +4,53 @@
 #include <fstream>
 
 using namespace std;
+
+World::World(int width, int height) {
+
+	this->organismList = new OrganismList();
+
+	if (height > 40) {
+		this->height = 40;
+	}
+	else if(height<5)
+	{
+		this->height = 5;
+	}
+	else {
+		this->height = height;
+	}
+
+	if (width > 80) {
+		this->width = 80;
+	}
+	else if (width < 5)
+	{
+		this->width = 5;
+	}
+	else {
+		this->width = width;
+	}
+
+}
+
 void World::drawWorld() {
 
 	this->moveCursorTo(0, 0);
-	for (int i = 0; i < 20 + 2; i++) {
+	for (int i = 0; i < width + 2; i++) {
 		cout << "-";
 	}
-	for (int i = 1; i < 20 + 1; i++) {
+	for (int i = 1; i < height+ 1; i++) {
 		cout << endl << "|";
-		this->moveCursorTo(20 + 1, i);
+		this->moveCursorTo(width + 1, i);
 		cout << "|";
 	}
 	cout << endl;
-	for (int i = 0; i < 20 + 2; i++) {
+	for (int i = 0; i < width + 2; i++) {
 		cout << "-";
 	}
 
+
+	this->moveCursorTo(0, height + 1);
 }
 
 void World::moveCursorTo(int x, int y)
@@ -27,3 +58,13 @@ void World::moveCursorTo(int x, int y)
 	COORD p = { x, y + 1 };
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), p);
 }
+
+void World::insertOrganism(Organism* organism)
+{
+	this->organismList->insert(organism);
+}
+
+
+
+
+

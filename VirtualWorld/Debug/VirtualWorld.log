@@ -1,4 +1,4 @@
 ﻿  World.cpp
-C:\Users\Dell\Documents\Visual Studio 2019\Projects\VirtualWorld\VirtualWorld\World.cpp(28,14): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-C:\Users\Dell\Documents\Visual Studio 2019\Projects\VirtualWorld\VirtualWorld\World.cpp(28,19): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\Dell\Documents\Visual Studio 2019\Projects\VirtualWorld\VirtualWorld\World.cpp(58,14): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+C:\Users\Dell\Documents\Visual Studio 2019\Projects\VirtualWorld\VirtualWorld\World.cpp(58,19): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
   VirtualWorld.vcxproj -> C:\Users\Dell\Documents\Visual Studio 2019\Projects\VirtualWorld\Debug\VirtualWorld.exe

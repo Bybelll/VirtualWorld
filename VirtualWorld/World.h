@@ -1,18 +1,23 @@
 #pragma once
-#include <list>
 #include "Organism.h"
+#include "OrganismList.h"
 class Organism;
+class OrganismList;
 
 class World
 {
 private:
-
-
+	int width;
+	int height;
+	OrganismList* organismList;
+	
 
 public:
-	std::list <Organism*> organisms;
+	World(int width, int height);
 	void doRound();
 	void drawWorld();
 	void moveCursorTo(int, int);
+	void insertOrganism(Organism*);
+
 };
 
