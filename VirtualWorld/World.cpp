@@ -2,6 +2,7 @@
 #include <iostream>
 #include <windows.h>
 #include <fstream>
+#include <time.h>
 
 using namespace std;
 
@@ -30,6 +31,17 @@ World::World(int width, int height) {
 	else {
 		this->width = width;
 	}
+	srand(time(NULL));
+}
+
+void World::doRound()
+{
+	system("cls");
+	this->moveCursorTo(0, this->getHeight() + 2);
+	this->organismList->action();
+	this->drawWorld();
+	this->organismList->refreshMove();
+	//this->organisms->drawAll();
 
 }
 
@@ -49,8 +61,10 @@ void World::drawWorld() {
 		cout << "-";
 	}
 
+	this->organismList->drawOrganisms();
 
-	this->moveCursorTo(0, height + 1);
+
+	this->moveCursorTo(0, height + 3);
 }
 
 void World::moveCursorTo(int x, int y)
@@ -63,6 +77,28 @@ void World::insertOrganism(Organism* organism)
 {
 	this->organismList->insert(organism);
 }
+
+int World::getWidth()
+{
+	return this->width;
+}
+
+int World::getHeight()
+{
+	return this->height;
+}
+
+Organism* World::getOrganismFromPosition(int x, int y) {
+	ListItem* iter = this->organismList->search(x, y);
+	if (iter != nullptr) {
+		return iter->getOrganism();
+	}
+	else {
+		return nullptr;
+	}
+}
+
+
 
 
 

@@ -3,7 +3,32 @@
 
 
 
-Organism::Organism(World* world, int strengh, int initiative, int x,int y, char symbol)
+World* Organism::getWorld()
+{
+	return this->world;
+}
+
+char Organism::getSymbol()
+{
+	return this->symbol;
+}
+
+bool Organism::isToDelete()
+{
+	return toDelete;
+}
+
+void Organism::setCanMove(bool canMove)
+{
+	this->canMove = canMove;
+}
+
+bool Organism::getCanMove()
+{
+	return this->canMove;
+}
+
+Organism::Organism(World* world, int strengh, int initiative, int x,int y, char symbol,bool canMove)
 {
 	this->world = world;
 	this->strengh = strengh;
@@ -11,6 +36,7 @@ Organism::Organism(World* world, int strengh, int initiative, int x,int y, char 
 	this->x = x;
 	this->y = y;
 	this->symbol = symbol;
+	this->canMove = canMove;
 }
 
 

@@ -13,5 +13,10 @@ public:
 	OrganismList();
 	~OrganismList();
 	void insert(Organism* organism);
+	void drawOrganisms();
+	void action();
+	ListItem* search(int x, int y);
+	void remove(ListItem*);
+	void refreshMove();
 };
 

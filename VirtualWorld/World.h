@@ -18,6 +18,9 @@ public:
 	void drawWorld();
 	void moveCursorTo(int, int);
 	void insertOrganism(Organism*);
+	int getWidth();
+	int getHeight();
+	Organism* getOrganismFromPosition(int x, int y);
 
 };
 
