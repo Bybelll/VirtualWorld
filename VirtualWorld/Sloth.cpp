@@ -16,6 +16,16 @@ void Sloth::action()
 	else if (chance == 0){
 		canMove = true;
 	}
-	
+}
 
+bool Sloth::reproduce()
+{
+	Sloth* offspring = new Sloth(this->getWorld(), this->getX(), this->getY());
+	if (Animal::tryReproduce(offspring)) {
+		return true;
+	}
+	else {
+		delete offspring;
+		return false;
+	}
 }

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Thorn::Thorn(World* world, int x, int y,bool canMove) : Plant(world, 2, x, y, 'c',canMove,100)
+Thorn::Thorn(World* world, int x, int y,bool canMove) : Plant(world, 2, x, y, 'C',canMove,100)
 {
 }
 

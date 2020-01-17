@@ -9,5 +9,6 @@ private:
 public:
 	Sloth(World* world, int x, int y);
 	void action();
+	bool reproduce();
 };
 

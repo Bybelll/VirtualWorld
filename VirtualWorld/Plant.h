@@ -13,7 +13,7 @@ public:
 	Plant(World* world, int strength, int x, int y, char symbol,bool canMove,int reproducingChance);
 	~Plant();
 	virtual void action();
-	//virtual bool collision(Organism*);
+	virtual bool collision(Organism*);
 	virtual bool reproduce() = 0;
 };
 

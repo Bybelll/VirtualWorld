@@ -28,10 +28,20 @@ bool Organism::getCanMove()
 	return this->canMove;
 }
 
-Organism::Organism(World* world, int strengh, int initiative, int x,int y, char symbol,bool canMove)
+int Organism::getStrength()
+{
+	return this->strength;
+}
+
+void Organism::setToDelete()
+{
+	this->toDelete = true;;
+}
+
+Organism::Organism(World* world, int strength, int initiative, int x,int y, char symbol,bool canMove)
 {
 	this->world = world;
-	this->strengh = strengh;
+	this->strength = strength;
 	this->initiative = initiative;
 	this->x = x;
 	this->y = y;

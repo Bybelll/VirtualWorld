@@ -6,5 +6,6 @@ class Turtle :
 public:
 	Turtle(World* world, int x, int y);
 	void action();
+	bool reproduce();
 };
 

@@ -157,3 +157,15 @@ bool Plant::tryReproduce(Organism* child) {
 	}
 }
 
+bool Plant::collision(Organism* other) {
+	cout << other->getSymbol() << " napotyka rosline " << this->getSymbol() << endl;
+	if (this->getStrength() > other->getStrength()) {
+		cout << "Zwierze " << other->getSymbol() << " rani sie na roslinie " << this->getSymbol()<< " i ginie" << endl;
+		other->setToDelete();
+	}
+	else {
+		cout << "Zwierze " << other->getSymbol() << " zjada rosline " << this->getSymbol() << endl;
+		this->setToDelete();
+	}
+	return true;
+}

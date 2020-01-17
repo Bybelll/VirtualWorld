@@ -4,5 +4,7 @@ class Wolf : public Animal
 {
 public:
 	Wolf(World* world, int x,int y);
+	~Wolf();
+	bool reproduce();
 };
 

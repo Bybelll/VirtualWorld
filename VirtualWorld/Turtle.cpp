@@ -11,3 +11,14 @@ void Turtle::action()
 		Animal::action();
 	}
 }
+bool Turtle::reproduce()
+{
+	Turtle* offspring = new Turtle(this->getWorld(), this->getX(), this->getY());
+	if (Animal::tryReproduce(offspring)) {
+		return true;
+	}
+	else {
+		delete offspring;
+		return false;
+	}
+}
