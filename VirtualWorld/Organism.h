@@ -34,5 +34,7 @@ public:
 	bool getCanMove();
 	int getStrength();
 	void setToDelete();
+	bool getToDelete();
+	void setStrength(int);
 };
 

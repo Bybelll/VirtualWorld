@@ -38,6 +38,16 @@ void Organism::setToDelete()
 	this->toDelete = true;;
 }
 
+bool Organism::getToDelete()
+{
+	return this->toDelete;
+}
+
+void Organism::setStrength(int strength)
+{
+	this->strength = strength;
+}
+
 Organism::Organism(World* world, int strength, int initiative, int x,int y, char symbol,bool canMove)
 {
 	this->world = world;

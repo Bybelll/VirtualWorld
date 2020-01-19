@@ -2,7 +2,6 @@
 #include <iostream>
 #include <windows.h>
 #include <fstream>
-#include <time.h>
 
 using namespace std;
 
@@ -31,18 +30,16 @@ World::World(int width, int height) {
 	else {
 		this->width = width;
 	}
-	srand(time(NULL));
 }
 
 void World::doRound()
 {
 	system("cls");
+	cout << "Michal Reclaw 150529" << endl;
 	this->moveCursorTo(0, this->getHeight() + 2);
 	this->organismList->action();
 	this->drawWorld();
 	this->organismList->refreshMove();
-	//this->organisms->drawAll();
-
 }
 
 void World::drawWorld() {
